@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Matter of Mind - Journal Page</title>
+
+    <!-- StyleSheets -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.1/css/bulma.min.css"/>
+    <link rel="stylesheet" href="styleJournal.css" type="text/css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap" rel="stylesheet">
+    
+    <script src="scriptJournal.js" type = "text/javascript" defer ></script>
+  </head>
+
+  <body>
+  
+    <!-- Current User -->
+    <div id = "listedUser">
+        <p class = "subtitle is-size-5 has-text-left"> Current User: Nobody is Logged In Currently </p>
+    </div>
+
+     <!-- CHAT POP UP 
+  <div class="chat-popup" id="myForm">
+    <form action="/action_page.php" class="form-container">
+      <h1>Chat</h1>
+
+      <label for="msg"><b>Message</b></label>
+      <textarea placeholder="Type message.." name="msg" required></textarea>
+
+      <button type="submit" class="btn">Send</button>
+      <button type="button" class="btn cancel" onclick="closeForm()">Close</button>
+    </form>
+  </div> -->
+  
+    
+    <!-- Header -->
+    <div id = "header">
+      <br>
+       <p class="title is-size-1 has-text-centered">Matter of Mind</p>
+    </div>
+  
+  
+   <!-- Menu -->
+    <nav id="menu">
+      <div class="menu-item">
+        <div class="menu-text">
+          <a href="./index.html">Home</a>
+        </div>
+      </div>
+      <div class="menu-item highlight">
+        <div class="menu-text">
+          <a href="./quiz.html">Quiz</a>
+        </div>
+      </div>
+      <div class="menu-item highlight">
+        <div class="menu-text">
+          <a href="./journal.html">Journal</a>
+        </div>
+      </div>
+      <div class="menu-item">
+        <div class="menu-text">
+          <a href="./resources.html">Resources</a>
+        </div>
+      </div>
+      <div class="menu-item">
+        <div class="menu-text">
+          <div id = "loginButton">Login</div>
+        </div>
+      </div>
+    </nav>
+  
+  
+    <!-- Login Modal -->
+    <div id="login" class="modal">
+      <form class="modal-content animate" action="/action_page.php" method="post" onsubmit = "return false">
+        <div class="container">
+          <label for="uname" ><b>Username*</b></label>
+          <input type="text" placeholder="Enter Username" name="uname" id="uname" required>
+          <label for="psw"><b>Password*</b></label>
+          <input type="password" placeholder="Enter Password" name="psw" id="psw" required>
+           
+          <button class="button" style="text-align=right;" type="submit" onclick="Login()">Login</button>
+        </div>
+        <div id="bottom">
+          <button type="button" id="close" class="cancelbtn">Cancel</button>
+          <span class="psw">Forgot <a href="./forgetPassword.html" target = "_self">password?</a></span>
+          <br><br>
+          <span class="psw"><a href="./createUser.html" target = "_self"> Create Account</a></span>
+        </div>
+      </form>
+    </div>
+  
+    
+    <!-- Content -->
+    <p class = "title is-size-3 has-text-centered"> Journal</p>
+    <p class = "subtitle is-size-5 has-text-centered"> This is a space for you to reflect.</p>
+    <p class = "hero subtitle is-size-5 is-italic has-text-left has-text-weight-bold">Why is journaling important</p>
+    <p class = "subtitle is-size-6 has-text-centered">Journaling can allow you to heathily express yourself and help deal with managing anxiety, reducing stress, and coping with depression.</p>
+    <p class = "subtitle is size-7 has-text-left is-italic has-text-weight-bold"> What should I journal about? </p>
+  
+    <div id = "prompts">
+      <li>Write about your day </li>
+      <li>Identify a goal for the week</li>
+        <li>Describe your favorite memory</li>
+        <li>Identify Things You're Grateful For</li>
+        <li>List and Describe Your Emotions</li>
+    </div>
+    
+    <br><br>
+  
+    <!-- Journal Section -->
+    <div id = "journalsection">
+    	<div id="journal-container"></div>
+  		<div class="journal-form">
+  			<label for="journaltext">Journal Something:</label>
+  			<textarea name="journaltext" id="journaltext" cols="24" rows="10"></textarea>
+  			<button class="button" id="createJournal">Submit Journal Entry</button>
+        <button class="button" id="journalClear">Clear</button>
+  		</div>
+    </div>
+  
+    
+    <br><br>
+  
+    <!-- Past Journal Entries -->
+    <p class = "subtitle is-size-3 has-text-centered">Your Past Journal Entries </p>
+    <div id = "journalEntries">
+      <p class = "hero is-size-4 has-text-centered "> <br>You have no entries yet! Please submit one.<br> </p>
+    </div>
+    <br><br><br><br><br><br><br><br><br>
+<div id="info-box">
+    <div>
+            <ul>
+                <li><a target="_top" href="index.html">Home</a></li>
+                <li><a target="_top" href="quiz.html">Quiz</a></li>
+                <li><a target="_top" href="journal.html">Journal</a></li>
+                <li><a target="_top" href="resources.html">Resources</a></li>
+            </ul>
+    </div>
+        </div>
+
+      
+  </body>
+</html>

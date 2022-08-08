@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Matter of Mind - Create User</title>
+
+    <!-- StyleSheets -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.1/css/bulma.min.css"/>
+    <link rel="stylesheet" href="styleJournal.css" type="text/css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap" rel="stylesheet">
+    
+    <script src="scriptJournal.js" type = "text/javascript" defer ></script>
+  </head>
+
+  <body>
+
+    <!-- Current User -->
+    <div id = "listedUser">
+        <p class = "subtitle is-size-5 has-text-left"> Current User: Nobody is Logged In Currently </p>
+    </div>
+
+  <!-- CHAT POP UP 
+  <div class="chat-popup" id="myForm">
+    <form action="/action_page.php" class="form-container">
+      <h1>Chat</h1>
+
+      <label for="msg"><b>Message</b></label>
+      <textarea placeholder="Type message.." name="msg" required></textarea>
+
+      <button type="submit" class="btn">Send</button>
+      <button type="button" class="btn cancel" onclick="closeForm()">Close</button>
+    </form>
+  </div> -->
+
+    <!-- Header -->
+    <div id = "header">
+      <br>
+      <p class="title is-size-1 has-text-centered">Matter of Mind</p>
+    </div>
+    
+    <!-- Menu -->
+    <nav id="menu">
+      <div class="menu-item">
+        <div class="menu-text">
+          <a href="./index.html">Home</a>
+        </div>
+      </div>
+      <div class="menu-item highlight">
+        <div class="menu-text">
+          <a href="./quiz.html">Quiz</a>
+        </div>
+      </div>
+      <div class="menu-item highlight">
+        <div class="menu-text">
+          <a href="./journal.html">Journal</a>
+        </div>
+      </div>
+      <div class="menu-item">
+        <div class="menu-text">
+          <a href="./resources.html">Resources</a>
+        </div>
+      </div>
+      <div class="menu-item">
+        <div class="menu-text">
+          <div id = "loginButton">Login</div>
+        </div>
+      </div>
+    </nav>
+    
+      
+    <!-- Login Modal -->
+    <div id="login" class="modal">
+      <form class="modal-content animate" action="/action_page.php" method="post" onsubmit = "return false">
+        <div class="container">
+          <label for="uname" ><b>Username*</b></label>
+          <input type="text" placeholder="Enter Username" name="uname" id="uname" required>
+          <label for="psw"><b>Password*</b></label>
+          <input type="password" placeholder="Enter Password" name="psw" id = "psw" required>
+           
+          <button class="button" style ="text-align=right;" type="submit" onclick="Login()">Login</button>
+        </div>
+        <div id = "bottom">
+          <button type="button" id="close" class="cancelbtn">Cancel</button>
+          <span class="psw">Forgot <a href="./forgetPassword.html" target = "_self">password?</a></span>
+          <br><br>
+          <span class="psw"><a href="./createUser.html" target = "_self" > Create Account</a></span>
+        </div>
+      </form>
+    </div>
+
+
+    <!-- Create Account Form -->
+    <p class = "subtitle is-size-5 has-text-centered"> Please enter your username or email address.</p>
+    <form id = "form">
+      <label for="FirstName"><b>First Name</b></label>
+        <input type="text" placeholder="First Name" name="FirstName" required>
+      <label for="LastName" ><b>Last Name</b></label>
+        <input type="text" placeholder="Last Name" name="LastName" required>
+      <label for="email"><b>Email</b></label>
+        <input type="text" placeholder="Email" name="email" id = "newEmail" required>
+      <label for="pass" ><b>Password</b></label>
+        <input type="text" placeholder="Password" name="pass" id = "newPsw" required>
+        
+      <button class="button" style="text-align = right;" type="submit" onclick="CreateAccount()">Create Account</button>    
+    </form>
+    <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+  </body>
+</html>
